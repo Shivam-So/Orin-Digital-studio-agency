@@ -1,0 +1,23 @@
+# Nested backup copy of the site (duplicate — not deployed)
+Auxa/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs / temp
+*.log
+*.tmp
+*.bak
+npm-debug.log*
+
+# Build artifacts (if any)
+node_modules/
+dist/
