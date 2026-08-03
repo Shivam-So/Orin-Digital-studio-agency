@@ -1180,27 +1180,9 @@ header();
 		  );
 		  return timeline;
 		}
-		const creativeTimeline = createTimeline('[data-xbh-trigger="creative"]', '[data-xbh-hero-images="creative"]', true);
+		const creativeTimeline = createTimeline('[data-xbh-trigger="creative"]', '[data-xbh-hero-images="creative"]');
 		const designTimeline = createTimeline('[data-xbh-trigger="design"]', '[data-xbh-hero-images="design"]');
 		const studioTimeline = createTimeline('[data-xbh-trigger="studio"]', '[data-xbh-hero-images="studio"]');
-		// Show Development images by default so the hero is never empty on load
-		creativeTimeline.progress(1);
-		// Keep only one category visible at a time - hovering another category hides the rest
-		$('[data-xbh-trigger="design"]').on('mouseenter', function () {
-		  creativeTimeline.reverse();
-		});
-		$('[data-xbh-trigger="studio"]').on('mouseenter', function () {
-		  creativeTimeline.reverse();
-		});
-		$('[data-xbh-trigger="creative"]').on('mouseenter', function () {
-		  designTimeline.reverse();
-		  studioTimeline.reverse();
-		});
-		// Restore the default Development images when leaving the other categories,
-		// so the hero is never left empty
-		$('[data-xbh-trigger="design"], [data-xbh-trigger="studio"]').on('mouseleave', function () {
-		  creativeTimeline.progress(1);
-		});
 	  }
 	  heroImage();
 	

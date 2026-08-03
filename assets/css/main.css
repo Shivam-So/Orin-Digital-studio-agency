@@ -8750,7 +8750,7 @@ blockquote .quote {
 }
 
 .about-brand .about-slider {
-  background: #16171b;
+  background: transparent;
   margin: 0;
 }
 .about-brand .xb-brand {
@@ -12889,6 +12889,10 @@ abbr[title] {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   opacity: 0.85;
+  width: 884px;
+  max-width: 100%;
+  aspect-ratio: 884 / 408;
+  object-fit: cover;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1500px) {
   .dm-hero-img {
@@ -12960,6 +12964,10 @@ abbr[title] {
 .hero-digital-marketing .dm-hero-content .xb-item--dm-image img {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
+  width: 275px;
+  max-width: 100%;
+  aspect-ratio: 275 / 328;
+  object-fit: cover;
 }
 @media (max-width: 1199px) {
   .dm-hero-content .xb-item--dm-image {
@@ -13023,6 +13031,7 @@ abbr[title] {
   width: 100%;
   height: 100%;
   z-index: -1;
+  filter: grayscale(100%);
 }
 
 .dm-service-slider {
@@ -13083,6 +13092,7 @@ abbr[title] {
 }
 .dm-service .xb-item--holder {
   margin-bottom: 50px;
+  height: 240px;
 }
 .dm-service .xb-item--title {
   font-size: 45px;
@@ -13110,6 +13120,10 @@ abbr[title] {
 }
 .dm-service .xb-item--content {
   color: #b2b6b8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .dm-service .xb-item--image {
   margin-bottom: 134px;
@@ -13128,6 +13142,9 @@ abbr[title] {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
 }
 .dm-service .xb-item--srv_link a {
   color: var(--color-white);
@@ -13245,6 +13262,14 @@ abbr[title] {
   height: calc(100% - 9%);
   width: 49%;
   filter: grayscale(100%);
+}
+@media (max-width: 991px) {
+  .dm-about--image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-top: 50px;
+  }
 }
 .about-photos img {
   width: 100%;
@@ -13640,11 +13665,13 @@ abbr[title] {
   -o-transition: 0.3s;
   transition: 0.3s;
   opacity: 0.8;
-  mix-blend-mode: luminosity;
+  mix-blend-mode: screen;
+  filter: invert(1);
   display: inline-block;
 }
 .dm-brand a:hover {
-  mix-blend-mode: unset;
+  mix-blend-mode: screen;
+  filter: invert(1) brightness(1.2);
   opacity: 1;
   -webkit-transform: translateY(-4px);
   -ms-transform: translateY(-4px);
@@ -16359,4 +16386,39 @@ img {
     font-size: 18px;
     line-height: 30px;
   }
+}
+/* ------------------------------------------
+= 5 Column Portfolio Grid Overrides
+-------------------------------------------*/
+@media (min-width: 992px) {
+  .cols-5 .grid-item {
+    width: 20% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .cols-5 .grid-item {
+    width: 33.333% !important;
+  }
+}
+@media (max-width: 767px) {
+  .cols-5 .grid-item {
+    width: 50% !important;
+  }
+}
+@media (max-width: 480px) {
+  .cols-5 .grid-item {
+    width: 100% !important;
+  }
+}
+
+.cols-5.row {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
+.cols-5.row > * {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+.cols-5 .portfolio-item {
+  margin-top: 30px !important;
 }
