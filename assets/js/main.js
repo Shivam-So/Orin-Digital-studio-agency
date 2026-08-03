@@ -100,10 +100,21 @@
 	  /**
 	   * smooth scroll
 	   */
-	  const lenis = new Lenis({
-		duration: .8,
-		smoothWheel: true,
-	  });
+  const lenis = new Lenis({
+	duration: .8,
+	smoothWheel: true,
+  });
+
+  /**
+   * smooth scroll on in-page anchor links
+   */
+  $('a[href^="#"]').on("click", function (e) {
+	const target = $(this.getAttribute("href"));
+	if (target.length) {
+	  e.preventDefault();
+	  lenis.scrollTo(target[0], { offset: -80 });
+	}
+  });
 	
 	  /**
 	   * animate
