@@ -16312,3 +16312,50 @@ img {
     aspect-ratio: 3 / 4;
   }
 }
+
+/* Client requested mobile/header polish */
+.xb-header-mobile-search {
+  display: none !important;
+}
+
+.portfolio-item .xbImage__hover img {
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .portfolio {
+    padding-top: 80px;
+    padding-bottom: 90px;
+  }
+
+  .portfolio-menu {
+    text-align: left !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .portfolio-menu button {
+    margin: 0 !important;
+    padding: 7px 12px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .portfolio-item {
+    margin-top: 28px !important;
+  }
+
+  .portfolio-item .xbImage__hover img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .dm-testimonial--content {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
