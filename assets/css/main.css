@@ -9058,11 +9058,11 @@ blockquote .quote {
   min-height: 220px;
 }
 .contact-form-inner .contact-form .xb-item--textarea {
-  margin-left: 34%;
+  margin-left: 0%;
 }
 @media (max-width: 1199px) {
   .contact-form-inner .contact-form .xb-item--textarea {
-    margin-left: 20%;
+    margin-left: 0%;
   }
 }
 @media (max-width: 991px) {
@@ -12954,6 +12954,12 @@ abbr[title] {
 .dm-hero-content .xb-item--title span.sp-two {
   color: #868686;
 }
+@media (max-width: 991px) {
+  .dm-hero-content .xb-item--title span.sp-one,
+  .dm-hero-content .xb-item--title span.sp-two {
+    color: #fff;
+  }
+}
 .dm-hero-content .xb-item--dm-image {
   top: 8%;
   position: absolute;
@@ -13009,6 +13015,24 @@ abbr[title] {
 .dm-btn .button__bg,
 .dm-btn-2 .button__bg {
   background: var(--color-white);
+}
+@media (max-width: 767px) {
+  .dm-btn,
+  .dm-btn-2 {
+    height: 130px;
+    width: 130px;
+  }
+  .hero-inner .dm-button {
+    flex: 1 1 auto;
+    min-width: 130px;
+  }
+  .hero-inner .dm-button + .dm-button {
+    margin-left: 15px;
+  }
+  .hero-inner .dm-btn,
+  .hero-inner .dm-btn-2 {
+    font-size: 14px;
+  }
 }
 
 .services-bg::before {
@@ -16485,6 +16509,12 @@ body.page-portfolio .section-title .title {
 @media (max-width: 991px) {
   .why_us-image img {
     height: 350px !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .why_us .section-title {
+    margin-top: 45px;
   }
 }
 
